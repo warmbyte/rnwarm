@@ -2,7 +2,7 @@
   "name": "rnwarm",
   "version": "0.0.1",
   "main": "dist/index.js",
-  "types": "types/index.d.ts",
+  "types": "types/src/index.d.ts",
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",

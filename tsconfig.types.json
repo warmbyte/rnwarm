@@ -1,16 +1,34 @@
 {
-  "extends": "./tsconfig.json",
   "compilerOptions": {
+    "target": "es5",
+    "module": "esnext",
+    "lib": [
+      "dom",
+      "esnext"
+    ],
     "declaration": true,
-    "declarationDir": "./types",
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "strict": true,
     "emitDeclarationOnly": true,
-    "noEmit": false
+    "noFallthroughCasesInSwitch": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noImplicitAny": true,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "jsx": "react-native",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "downlevelIteration": true,
+    "declarationDir": "./types"
   },
-  "files": [
+  "include": [
     "./src/index.ts",
   ],
   "exclude": [
-    "node_modules/**/*",
-    "./__tests__/**/*"
+    "node_modules"
   ]
 }

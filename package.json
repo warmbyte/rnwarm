@@ -1,8 +1,8 @@
 {
   "name": "rnwarm",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "dist/index.js",
-  "types": "types/src/index.d.ts",
+  "types": "dist/index.d.ts",
   "license": "MIT",
   "scripts": {
     "android": "react-native run-android",
@@ -11,20 +11,18 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "build": "babel --extensions .ts,.tsx ./src --out-dir dist",
-    "build:types": "rimraf node_modules/@types/react-test-renderer && rimraf ./types && tsc --project ./tsconfig.types.json"
+    "build": "rimraf dist/ && tsc -p tsconfig.build.json"
   },
   "files": [
-    "types",
     "dist"
   ],
   "dependencies": {
     "@babel/preset-env": "^7.13.10",
     "@emotion/native": "^11.0.0",
     "@emotion/react": "^11.1.4",
-    "styled-system": "^5.1.5",
     "react": ">=16.4.1",
-    "react-native": ">=0.56.0"
+    "react-native": ">=0.56.0",
+    "styled-system": "^5.1.5"
   },
   "devDependencies": {
     "@babel/cli": "^7.13.10",

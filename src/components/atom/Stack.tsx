@@ -13,7 +13,19 @@ const Stack: React.FC<StackProps> = ({spacing, children, ...rest}) => {
     const isLastChild = index + 1 === validChildren.length;
     const margin = isLastChild ? 0 : spacing;
     const wrappedChildren = (
-      <Box key={index} marginRight={margin} marginBottom={margin}>
+      <Box
+        key={index}
+        marginRight={
+          rest.flexDirection === 'row' || rest.flexDirection === 'row-reverse'
+            ? margin
+            : undefined
+        }
+        marginBottom={
+          rest.flexDirection === 'column' ||
+          rest.flexDirection === 'column-reverse'
+            ? margin
+            : undefined
+        }>
         {child}
       </Box>
     );
@@ -22,6 +34,10 @@ const Stack: React.FC<StackProps> = ({spacing, children, ...rest}) => {
   });
 
   return <Box {...rest}>{clones}</Box>;
+};
+
+Stack.defaultProps = {
+  flexDirection: 'column',
 };
 
 export default Stack;

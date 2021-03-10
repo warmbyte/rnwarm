@@ -1,3 +1,4 @@
+import React from 'react';
 import {TextInput, TextInputProps} from 'react-native';
 import styled from '@emotion/native';
 import {
@@ -7,6 +8,8 @@ import {
   LayoutProps,
   PositionProps,
   SpaceProps,
+  FontSizeProps,
+  fontStyle,
   border,
   color,
   compose,
@@ -22,6 +25,7 @@ export interface InputStyleProps
     FlexboxProps,
     LayoutProps,
     PositionProps,
+    FontSizeProps,
     SpaceProps {}
 
 export interface InputProps extends InputStyleProps, TextInputProps {}
@@ -33,8 +37,22 @@ export const textStyle = compose(
   layout,
   position,
   space,
+  fontStyle,
 );
 
-const Input = styled(TextInput)<InputProps>(textStyle);
+const BaseInput = styled(TextInput)<InputProps>(textStyle);
+
+const Input: React.FC<InputProps> = (props) => (
+  <BaseInput
+    py={10}
+    px={15}
+    fontSize={20}
+    borderWidth={1}
+    borderColor="gray"
+    borderRadius={8}
+    minWidth="100%"
+    {...props}
+  />
+);
 
 export default Input;

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Dimensions, SafeAreaView, TextInput, Image} from 'react-native';
+import {Dimensions, SafeAreaView, Image} from 'react-native';
 import {Button, Stack, Input} from './src';
 
 const width = Dimensions.get('screen').width;
@@ -19,17 +19,7 @@ const App = () => {
               'http://assets.stickpng.com/images/580b57fcd9996e24bc43c51f.png',
           }}
         />
-        <Input
-          placeholder="this is placeholder"
-          // style={{
-          //   minWidth: '100%',
-          //   borderColor: 'gray',
-          //   borderWidth: 1,
-          //   padding: 10,
-          //   fontSize: 20,
-          //   borderRadius: 10,
-          // }}
-        />
+        <Input placeholder="this is placeholder" />
         <Stack
           width={width - 40}
           flexDirection="row"

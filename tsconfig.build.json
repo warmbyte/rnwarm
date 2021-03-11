@@ -30,6 +30,7 @@
   },
   "exclude": [
     "__tests__",
+    "./App.tsx",
     "node_modules"
   ],
 }

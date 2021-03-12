@@ -19,6 +19,7 @@ import {
   typography,
   compose,
 } from 'styled-system';
+import {baseStyleText} from '../../theme';
 
 export interface TextProps
   extends BaseProps,
@@ -43,5 +44,6 @@ export const textStyle = compose(
 );
 
 const Text = styled(BaseText)<TextProps>(textStyle);
+Text.defaultProps = baseStyleText;
 
 export default Text;

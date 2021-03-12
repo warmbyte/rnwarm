@@ -1,6 +1,6 @@
 {
   "name": "rnwarm",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "MIT",
@@ -23,6 +23,7 @@
     "@emotion/react": "^11.1.5",
     "@types/react-native": "^0.63.2",
     "@types/styled-system": "^5.1.10",
+    "polished": "^4.1.1",
     "react-use": "^17.2.0",
     "styled-system": "^5.1.5"
   },
@@ -39,6 +40,8 @@
     "eslint": "^6.5.1",
     "jest": "^25.1.0",
     "metro-react-native-babel-preset": "^0.59.0",
+    "react": "^17.0.1",
+    "react-native": "^0.63.4",
     "react-test-renderer": "16.13.1",
     "typescript": "^3.8.3"
   },

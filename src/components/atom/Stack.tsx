@@ -15,6 +15,7 @@ const Stack: React.FC<StackProps> = ({spacing, children, ...rest}) => {
     const wrappedChildren = (
       <Box
         key={index}
+        {...(child.props ?? {})}
         marginRight={
           rest.flexDirection === 'row' || rest.flexDirection === 'row-reverse'
             ? margin

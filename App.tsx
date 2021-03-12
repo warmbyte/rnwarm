@@ -1,6 +1,6 @@
 import React from 'react';
 import {Dimensions, SafeAreaView, ScrollView} from 'react-native';
-import {Button, Stack, Input, Image, Text} from './src';
+import {Button, Stack, Input, Image} from './src';
 import {ThemeProvider} from './src/theme';
 
 const width = Dimensions.get('screen').width;
@@ -16,12 +16,6 @@ const App = () => {
             alignItems="center"
             spacing={20}
             pt={width / 4}>
-            <Text fontSize={16} lineHeight={20}>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim
-              architecto, provident assumenda unde magnam iure alias culpa nobis
-              dolorem a minima numquam cumque ut. Nemo ratione voluptas vero
-              incidunt nostrum!
-            </Text>
             <Image
               resizeMode="contain"
               width={200}
@@ -37,8 +31,8 @@ const App = () => {
               flexDirection="row"
               spacing={2}
               justifyContent="center">
-              <Button colorScheme="pink" label="Im lucky" />
-              <Button label="Im not lucky" />
+              <Button colorScheme="black" label="search" />
+              <Button colorScheme="blue" label="I'm feeling lucky" />
             </Stack>
           </Stack>
         </ScrollView>

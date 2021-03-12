@@ -48,7 +48,7 @@ const Input: React.FC<InputProps> = (props) => (
     px={15}
     fontSize={20}
     borderWidth={1}
-    borderColor="gray"
+    borderColor="#bfbfbf"
     borderRadius={8}
     minWidth="100%"
     {...props}

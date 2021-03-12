@@ -12,8 +12,6 @@ export const getColorContrast = (color: string) => {
   const darkScore = getContrast(color, dark);
   const lightScore = getContrast(color, light);
 
-  console.log(darkScore, lightScore);
-
   if (darkScore > lightScore) {
     cache[color] = dark;
     return dark;

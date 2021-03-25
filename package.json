@@ -1,6 +1,6 @@
 {
   "name": "rnwarm",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "MIT",
@@ -24,6 +24,7 @@
     "@types/react-native": "^0.63.2",
     "@types/styled-system": "^5.1.10",
     "polished": "^4.1.1",
+    "react-native-scalable-image": "^1.1.0",
     "react-use": "^17.2.0",
     "styled-system": "^5.1.5"
   },

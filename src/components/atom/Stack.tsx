@@ -12,10 +12,23 @@ const Stack: React.FC<StackProps> = ({spacing, children, ...rest}) => {
   const clones = validChildren.map((child, index) => {
     const isLastChild = index + 1 === validChildren.length;
     const margin = isLastChild ? 0 : spacing;
+    const {
+      flex,
+      flexDirection,
+      flexGrow,
+      flexBasis,
+      width,
+      height,
+    } = child.props;
     const wrappedChildren = (
       <Box
         key={index}
-        {...(child.props ?? {})}
+        flex={flex}
+        flexDirection={flexDirection}
+        flexGrow={flexGrow}
+        flexBasis={flexBasis}
+        width={width}
+        height={height}
         marginRight={
           rest.flexDirection === 'row' || rest.flexDirection === 'row-reverse'
             ? margin
